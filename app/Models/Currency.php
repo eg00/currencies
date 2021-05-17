@@ -10,4 +10,11 @@ class Currency extends Model
     use HasFactory;
 
     const CREATED_AT = null;
+
+    protected $fillable = ['char_code', 'name', 'rate'];
+
+    public function history()
+    {
+        return $this->hasMany(CurrencyHistory::class, 'currency_id');
+    }
 }

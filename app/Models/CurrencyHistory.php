@@ -12,4 +12,11 @@ class CurrencyHistory extends Model
     protected $table = 'currency_history';
 
     const UPDATED_AT = null;
+
+    protected $fillable = ['rate'];
+
+    public function currency()
+    {
+        return $this->belongsTo(Currency::class);
+    }
 }
