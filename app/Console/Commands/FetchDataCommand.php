@@ -15,7 +15,7 @@ class FetchDataCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'currency:fetch {currency?: Fetch only passed currency}';
+    protected $signature = 'currency:fetch {currency?}';
 
     /**
      * The console command description.
