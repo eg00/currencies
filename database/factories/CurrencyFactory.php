@@ -22,9 +22,9 @@ class CurrencyFactory extends Factory
     public function definition()
     {
         return [
-            'char_code' => $this->faker->regexify('[A-Z]{3}'),
+            'char_code' => $this->faker->unique()->regexify('[A-Z]{3}'),
             'name' => $this->faker->sentence(),
-            'rate' => $this->faker->randomFloat(),
+            'rate' => $this->faker->randomFloat(2, 0, 1000),
             'updated_at' => now(),
         ];
     }
